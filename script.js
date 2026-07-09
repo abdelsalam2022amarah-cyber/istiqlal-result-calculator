@@ -1,117 +1,69 @@
 function calculate() {
 
-let adab = Number(document.getElementById("adab").value);
-let ta3beer = Number(document.getElementById("ta3beer").value);
+    const name = document.getElementById("name").value;
 
-if (adab < 0 || adab > 44) {
-alert("درجة الدراسات الأدبية يجب أن تكون بين 0 و44");
-return;
-}
+    const adabi = parseFloat(document.getElementById("adabi").value);
 
-if (ta3beer < 0 || ta3beer > 23) {
-alert("درجة التعبير يجب أن تكون بين 0 و23");
-return;
-}
+    const ta3beer = parseFloat(document.getElementById("ta3beer").value);
 
-let current = adab + ta3beer;
+    const result = document.getElementById("result");
 
-let required = 56 - current;
+    result.innerHTML = "";
 
-let message = "";
+    if (isNaN(adabi) || isNaN(ta3beer)) {
+        result.style.background = "#f8d7da";
+        result.style.color = "#721c24";
+        result.innerHTML = "يرجى إدخال جميع الدرجات.";
+        return;
+    }
 
-if (required <= 0) {
+    if (adabi < 0 || adabi > 44) {
+        result.style.background = "#f8d7da";
+        result.style.color = "#721c24";
+        result.innerHTML = "درجة الدراسات الأدبية يجب أن تكون بين 0 و44.";
+        return;
+    }
 
-message = `
-<div class="card">
-<h2 style="color:green;">🎉 مبروك</h2>
+    if (ta3beer < 0 || ta3beer > 23) {
+        result.style.background = "#f8d7da";
+        result.style.color = "#721c24";
+        result.innerHTML = "درجة التعبير يجب أن تكون بين 0 و23.";
+        return;
+    }
 
-<p>
-مجموعك الحالي: <b>${current}</b> من 67
-</p>
+    const current = adabi + ta3beer;
+    const need = 56 - current;
 
-<p>
-لقد ضمنت النجاح في المادة حتى قبل امتحان الدراسات اللغوية.
-</p>
-</div>
-`;
+    if (need <= 0) {
 
-}
+        result.style.background = "#d4edda";
+        result.style.color = "#155724";
 
-else if(required > 44){
+        result.innerHTML =
+        "<h3>🎉 مبروك " + name + "</h3>" +
+        "<p>لقد ضمنت النجاح قبل امتحان الدراسات اللغوية.</p>" +
+        "<p>مجموعك الحالي: <strong>" + current + "</strong> درجة.</p>";
 
-message = `
-<div class="card">
+    } else if (need <= 44) {
 
-<h2 style="color:red;">للأسف</h2>
+        result.style.background = "#fff3cd";
+        result.style.color = "#856404";
 
-<p>
-مجموعك الحالي: <b>${current}</b> من 67
-</p>
+        result.innerHTML =
+        "<h3>الدرجة المطلوبة</h3>" +
+        "<p>مجموعك الحالي: <strong>" + current + "</strong> درجة.</p>" +
+        "<p>تحتاج إلى <strong>" + need + "</strong> درجة من 44 في امتحان الدراسات اللغوية.</p>";
 
-<p>
+    } else {
 
-تحتاج إلى <b>${required}</b> درجة.
+        result.style.background = "#f8d7da";
+        result.style.color = "#721c24";
 
-</p>
+        result.innerHTML =
+        "<h3>للأسف</h3>" +
+        "<p>مجموعك الحالي: <strong>" + current + "</strong> درجة.</p>" +
+        "<p>تحتاج إلى <strong>" + need + "</strong> درجة، وهذا أكبر من الدرجة النهائية (44)، لذلك النجاح غير ممكن.</p>";
 
-<p style="color:red">
-
-وهذا غير ممكن لأن امتحان الدراسات اللغوية من 44 درجة فقط.
-
-</p>
-
-</div>
-`;
-
-}
-
-else{
-
-message = `
-<div class="card">
-
-<h2 style="color:#1565c0">
-
-النتيجة
-
-</h2>
-
-<p>
-
-مجموعك الحالي:
-
-<b>${current}</b>
-
-من 67
-
-</p>
-
-<p>
-
-للنجاح تحتاج إلى
-
-</p>
-
-<h1 style="color:green">
-
-${required}
-
-درجة
-
-</h1>
-
-<p>
-
-في امتحان الدراسات اللغوية.
-
-</p>
-
-</div>
-
-`;
-
-}
-
-document.getElementById("result").innerHTML = message;
+    }
 
 }
