@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حاسبة التحقق من النجاح في امتحان النقد والمطالعة</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h2>مراقبة التربية والتعليم - بلدية الخمس</h2>
+
+<h3>مكتب الخدمات التعليمية سوق الخميس</h3>
+
+<h2>مدرسة الاستقلال الثانوية - بنين</h2>
+
+<h1>حاسبة التحقق من النجاح</h1>
+
+<h2>امتحان النقد والمطالعة</h2>
+
+<p class="note">
+درجة النجاح المطلوبة <b>98 من 196</b>
+</p>
+
+<label>اسم الطالب (اختياري)</label>
+<input type="text" id="name">
+
+<label>درجة النحو والصرف والإملاء (من 76)</label>
+<input type="number" id="nahw" min="0" max="76">
+
+<label>درجة الأدب والنصوص (من 50)</label>
+<input type="number" id="adab" min="0" max="50">
+
+<label>درجة التعبير (من 24)</label>
+<input type="number" id="ta3beer" min="0" max="24">
+
+<button onclick="calculate()">
+🔍 تحقق من النجاح
+</button>
+
+<div id="result"></div>
+
+<br>
+
+<a href="adabi.html" class="menu">
+⬅ العودة إلى القسم الأدبي
+</a>
+
+</div>
+
+<script src="naqd.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حاسبة المجموع الكلي والمعدل العام</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:#1565c0;
+color:white;
+padding:12px;
+border:1px solid #ccc;
+}
+
+td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+input{
+width:80px;
+padding:8px;
+text-align:center;
+font-size:18px;
+}
+
+.totalCell{
+font-weight:bold;
+color:#1565c0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h1>حاسبة المجموع الكلي والمعدل العام</h1>
+
+<p class="note">
+
+أدخل درجات أعمال السنة والامتحان لكل مادة
+
+</p>
+
+<table>
+
+<tr>
+
+<th>المادة</th>
+
+<th>أعمال السنة</th>
+
+<th>الامتحان</th>
+
+<th>المجموع</th>
+
+</tr>
+<tr>
+<td>التربية الإسلامية</td>
+
+<td>
+<input type="number" id="islam_work" min="0" max="24">
+</td>
+
+<td>
+<input type="number" id="islam_exam" min="0" max="56">
+</td>
+
+<td class="totalCell" id="islam_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>اللغة العربية</td>
+
+<td>
+<input type="number" id="arabic_work" min="0" max="48">
+</td>
+
+<td>
+<input type="number" id="arabic_exam" min="0" max="112">
+</td>
+
+<td class="totalCell" id="arabic_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>اللغة الإنجليزية</td>
+
+<td>
+<input type="number" id="english_work" min="0" max="48">
+</td>
+
+<td>
+<input type="number" id="english_exam" min="0" max="112">
+</td>
+
+<td class="totalCell" id="english_total">0</td>
+
+</tr>
+<tr>
+
+<td>تقنية المعلومات</td>
+
+<td>
+<input type="number" id="it_work" min="0" max="24">
+</td>
+
+<td>
+<input type="number" id="it_exam" min="0" max="56">
+</td>
+
+<td class="totalCell" id="it_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>الرياضيات</td>
+
+<td>
+<input type="number" id="math_work" min="0" max="60">
+</td>
+
+<td>
+<input type="number" id="math_exam" min="0" max="140">
+</td>
+
+<td class="totalCell" id="math_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>الإحصاء</td>
+
+<td>
+<input type="number" id="stat_work" min="0" max="24">
+</td>
+
+<td>
+<input type="number" id="stat_exam" min="0" max="56">
+</td>
+
+<td class="totalCell" id="stat_total">0</td>
+
+</tr>
+<tr>
+
+<td>الفيزياء</td>
+
+<td>
+<input type="number" id="physics_work" min="0" max="60">
+</td>
+
+<td>
+<input type="number" id="physics_exam" min="0" max="140">
+</td>
+
+<td class="totalCell" id="physics_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>الكيمياء</td>
+
+<td>
+<input type="number" id="chem_work" min="0" max="48">
+</td>
+
+<td>
+<input type="number" id="chem_exam" min="0" max="112">
+</td>
+
+<td class="totalCell" id="chem_total">0</td>
+
+</tr>
+
+<tr>
+
+<td>الأحياء</td>
+
+<td>
+<input type="number" id="bio_work" min="0" max="48">
+</td>
+
+<td>
+<input type="number" id="bio_exam" min="0" max="112">
+</td>
+
+<td class="totalCell" id="bio_total">0</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="calculate()" class="menu">
+📊 احسب المجموع الكلي والمعدل العام
+</button>
+
+<div id="result"></div>
+
+<br>
+
+<a href="elmi.html" class="menu">
+⬅ العودة إلى القسم العلمي
+</a>
+
+</div>
+
+<script src="total.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة النجاح في امتحان النحو والصرف والإملاء</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h1>حاسبة التحقق من النجاح</h1>
+
+<h2>امتحان النحو والصرف والإملاء</h2>
+
+<div class="info">
+درجة النجاح المطلوبة <b>56</b> من <b>112</b>
+</div>
+
+<label>اسم الطالب (اختياري)</label>
+<input type="text" id="name">
+
+<label>درجة الدراسات الأدبية (من 44)</label>
+<input type="number" id="adab" min="0" max="44">
+
+<label>درجة التعبير (من 24)</label>
+<input type="number" id="ta3beer" min="0" max="24">
+
+<button onclick="calculate()">
+🔎 تحقق من النجاح
+</button>
+
+<div id="result"></div>
+
+<br>
+
+<a href="adabi.html" class="menu">
+⬅️ العودة إلى القسم الأدبي
+</a>
+
+</div>
+
+<script src="nahw.js"></script>
+
+</body>
+</html>

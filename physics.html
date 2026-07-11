@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حاسبة التحقق من النجاح في امتحان الفيزياء الميكانيكية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h2>مراقبة التربية والتعليم - بلدية الخمس</h2>
+
+<h3>مكتب الخدمات التعليمية سوق الخميس</h3>
+
+<h2>مدرسة الاستقلال الثانوية - بنين</h2>
+
+<h1>حاسبة التحقق من النجاح</h1>
+
+<h2>امتحان الفيزياء الميكانيكية</h2>
+
+<p class="note">
+درجة النجاح المطلوبة <b>70 من 140</b>
+</p>
+
+<label>اسم الطالب (اختياري)</label>
+<input type="text" id="name">
+
+<label>درجة الفيزياء الكهربائية (من 84)</label>
+<input type="number" id="electric" min="0" max="84">
+
+<button onclick="calculate()">
+🔍 تحقق من النجاح
+</button>
+
+<div id="result"></div>
+
+<br>
+
+<a href="elmi.html" class="menu">
+⬅ العودة إلى القسم العلمي
+</a>
+
+</div>
+
+<script src="physics.js"></script>
+
+</body>
+
+</html>

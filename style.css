@@ -1,0 +1,114 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+direction:rtl;
+background:#eef3f9;
+padding:20px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.logo{
+width:170px;
+margin-bottom:20px;
+}
+
+h1,h2,h3{
+color:#1565c0;
+margin:15px 0;
+}
+
+.note{
+background:#fff8dc;
+padding:15px;
+margin:20px 0;
+border-radius:10px;
+font-size:20px;
+}
+
+.menu{
+display:block;
+background:#1565c0;
+color:#fff;
+text-decoration:none;
+padding:18px;
+margin:15px 0;
+border-radius:12px;
+font-size:22px;
+font-weight:bold;
+}
+
+.menu:hover{
+background:#0d47a1;
+}
+label{
+display:block;
+text-align:right;
+margin-top:15px;
+margin-bottom:8px;
+font-size:20px;
+font-weight:bold;
+}
+
+input{
+display:block;
+width:100%;
+padding:14px;
+font-size:22px;
+border:2px solid #ccc;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+button{
+display:block;
+width:100%;
+padding:18px;
+font-size:24px;
+background:#1565c0;
+color:white;
+border:none;
+border-radius:12px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#0d47a1;
+}
+.logo{
+    width:150px;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+}
+.author{
+    margin-top:25px;
+    text-align:center;
+    color:#0d47a1;
+    font-size:22px;
+    font-weight:bold;
+    line-height:1.8;
+    font-family:"Amiri","Scheherazade New","Tahoma",serif;
+}
+
+.footer{
+    margin-top:20px;
+    text-align:center;
+    color:#666;
+    font-size:18px;
+    font-style:italic;
+}
